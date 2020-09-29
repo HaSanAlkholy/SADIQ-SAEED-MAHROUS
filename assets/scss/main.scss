@@ -758,6 +758,7 @@ nav {
         margin-bottom: 125px;
         margin-top: 70px;
         cursor: pointer;
+        color: $color1;
 
         @media (max-width: 576px) {
             margin-bottom: 130px;
@@ -818,6 +819,7 @@ nav {
             outline: none;
             box-shadow: none;
             background-color: transparent;
+            color: $color1;
 
             @media (max-width: 576px) {
                 left: 30px;
@@ -1482,7 +1484,7 @@ footer {
                     color: $color1;
                     position: absolute;
                     top: 50%;
-                    left: 25px;
+                    left: 20px;
                     transform: translate(-50%, -50%);
                     font-size: 18px;
                     transition: all 0.5s;
@@ -1828,7 +1830,7 @@ html[dir="ltr"] {
                 .form-group {
                     a {
                         left: unset;
-                        right: 20px;
+                        right: 10px;
                     }
                     input {
                         padding-right: unset;

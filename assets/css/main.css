@@ -1175,6 +1175,7 @@ nav .nava-active .nava-content {
   margin-bottom: 125px;
   margin-top: 70px;
   cursor: pointer;
+  color: #26247b;
 }
 
 @media (max-width: 576px) {
@@ -1243,6 +1244,7 @@ nav .nava-active .nava-content {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
+  color: #26247b;
 }
 
 @media (max-width: 576px) {
@@ -2027,7 +2029,7 @@ footer .footer-top .mail .form-group a {
   color: #26247b;
   position: absolute;
   top: 50%;
-  left: 25px;
+  left: 20px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 18px;
@@ -2380,7 +2382,7 @@ html[dir="ltr"] header .swiper-container .swiper-button-next {
 
 html[dir="ltr"] footer .footer-top .mail .form-group a {
   left: unset;
-  right: 20px;
+  right: 10px;
 }
 
 html[dir="ltr"] footer .footer-top .mail .form-group input {
