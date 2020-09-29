@@ -1898,12 +1898,18 @@ header .swiper-container .swiper-slide:hover img {
 #notes .note .note-icon {
   margin-bottom: 30px;
   font-size: 36px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #notes .note .note-body p {
   font-size: 16px;
   margin: 0 auto;
   max-width: 70%;
+}
+
+#notes .note:hover .note-icon {
+  color: #ed1c24;
 }
 
 footer {

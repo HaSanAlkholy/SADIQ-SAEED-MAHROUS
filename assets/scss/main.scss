@@ -1369,6 +1369,7 @@ header {
         .note-icon {
             margin-bottom: 30px;
             font-size: 36px;
+            transition: all 0.5s;
         }
 
         .note-body {
@@ -1376,6 +1377,12 @@ header {
                 font-size: 16px;
                 margin: 0 auto;
                 max-width: 70%;
+            }
+        }
+
+        &:hover{
+            .note-icon{
+                color:$color2;
             }
         }
     }
