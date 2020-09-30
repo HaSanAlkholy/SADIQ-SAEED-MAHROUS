@@ -160,7 +160,54 @@ $(window).on('load', function () {
     },
   });
 
-  var mySwiper4 = new Swiper('.notes-swiper-container', {
+  var mySwiper4 = new Swiper('.banners-swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    updateOnWindowResize: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    autoplay: false,
+    allowTouchMove: false,
+
+    breakpoints: {
+      // when window width is >= 576px
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        allowTouchMove: true,
+        autoplay: {
+          delay: 4000,
+        }
+      },
+      576: {
+        slidesPerView: 2,
+        allowTouchMove: true,
+        autoplay: {
+          delay: 4000,
+        }
+      },
+      // when window width is >= 250px
+      0: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        autoplay: 4000,
+      }
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+  });
+
+  var mySwiper5 = new Swiper('.notes-swiper-container', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -203,7 +250,7 @@ $(window).on('load', function () {
 
   });
 
-  var mySwiper5 = new Swiper('footer .swiper-container', {
+  var mySwiper6 = new Swiper('footer .swiper-container', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -263,6 +310,7 @@ $(window).on('load', function () {
       mySwiper3.slideNext();
       mySwiper4.slideNext();
       mySwiper5.slideNext();
+      mySwiper6.slideNext();
     }, 4000);
   }
 

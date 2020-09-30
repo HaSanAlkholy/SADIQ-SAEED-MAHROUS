@@ -33,10 +33,10 @@
                     </ul>
                     <div class="top-drops">
                         <div class="dropdown nav-currency">
-                            <a> الريال السعودي <i class="fas fa-sort-down"></i></a>
+                            <a> ريال <i class="fas fa-sort-down"></i></a>
                             <div class="dropdown-content">
-                                <div><a href="#"> الريال السعودى</a></div>
-                                <div><a href="#"> الجنية المصرى</a></div>
+                                <div><a href="#"> ريال</a></div>
+                                <div><a href="#"> دولار</a></div>
                             </div>
                         </div>
                         <div class="dropdown nav-lang">
@@ -82,7 +82,7 @@
                             <i class="fas fa-heart"></i> رغباتي
                         </div>
                         <div class="cart" id="cart-btn">
-                            <i class="fas fa-shopping-cart"></i> <span>العربة</span> 
+                            <i class="fas fa-shopping-cart"></i> <span>العربة</span>
                         </div>
                     </div>
                 </div>
@@ -101,6 +101,16 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="nava-currency slide">
+                            <a class="drop">
+                                ريال <i class="fas fa-sort-down"></i></a>
+                            <ul>
+                                <li><a href="#">ريال</a>
+                                <li><a href="#"> دولار</a></li>
+                                </li>
+                            </ul>
+                        </div>
+                      
                         <div class="nava-close" id="close-nava">
                             <i class="fas fa-times"></i>
                         </div>
@@ -113,16 +123,6 @@
                                 <li><a href="#">تسجيل الدخول</a></li>
                                 <li><a href="#">تسجيل جديد</a></li>
                             </ul>
-                        </li>
-                        <li class="slide sm-link">
-                            <div class="drop"> الريال السعودى <i class="fas fa-sort-down"></i> </div>
-                            <ul>
-                                <li><a href="#">الريال السعودى</a></li>
-                                <li><a href="#">الجنية المصرى</a></li>
-                            </ul>
-                        </li>
-                        <li class="sm-link">
-                            <a href="#">رغباتي</a>
                         </li>
                         <li> <a href="#"> كمبروسورات السيارة</a></li>
                         <li> <a href="#"> رديترات مكيف السيارة</a></li>
@@ -180,21 +180,32 @@
         <div class="container">
             <div class="c2">
                 <div class="banners-content">
-                    <div class="banner" data-aos="fade-left">
-                        <div class="banner-img"><a href="#"><img src="./assets/img/banners/1.jpg" alt=".."></a></div>
-                        <p> <a href="#"> أدوات التعليق </a></p>
-                    </div>
-                    <div class="banner" data-aos="fade-left" data-aos-delay="300">
-                        <div class="banner-img"><a href="#"><img src="./assets/img/banners/2.jpg" alt=".."></a></div>
-                        <p> <a href="#"> كمبروسورات السيارة </a></p>
-                    </div>
-                    <div class="banner" data-aos="fade-right" data-aos-delay="300">
-                        <div class="banner-img"><a href="#"><img src="./assets/img/banners/3.jpg" alt=".."></a></div>
-                        <p> <a href="#"> رديترات مكيف السيارة </a></p>
-                    </div>
-                    <div class="banner" data-aos="fade-right">
-                        <div class="banner-img"><a href="#"><img src="./assets/img/banners/4.jpg" alt=".."></a></div>
-                        <p> <a href="#"> زيوت السيارات </a></p>
+                    <div class="banners-swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="banner swiper-slide" data-aos="fade-left">
+                                <div class="banner-img"><a href="#"><img src="./assets/img/banners/1.jpg" alt=".."></a>
+                                </div>
+                                <p> <a href="#"> أدوات التعليق </a></p>
+                            </div>
+                            <div class="banner swiper-slide" data-aos="fade-left" data-aos-delay="300">
+                                <div class="banner-img"><a href="#"><img src="./assets/img/banners/2.jpg" alt=".."></a>
+                                </div>
+                                <p> <a href="#"> كمبروسورات السيارة </a></p>
+                            </div>
+                            <div class="banner swiper-slide" data-aos="fade-right" data-aos-delay="300">
+                                <div class="banner-img"><a href="#"><img src="./assets/img/banners/3.jpg" alt=".."></a>
+                                </div>
+                                <p> <a href="#"> رديترات مكيف السيارة </a></p>
+                            </div>
+                            <div class="banner swiper-slide" data-aos="fade-right">
+                                <div class="banner-img"><a href="#"><img src="./assets/img/banners/4.jpg" alt=".."></a>
+                                </div>
+                                <p> <a href="#"> زيوت السيارات </a></p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
                     </div>
                 </div>
             </div>
@@ -616,7 +627,7 @@
                                 </div>
                             </div>
                             <div class="note swiper-slide">
-                                <div class="note-icon"><i class="fas fa-user"></i></div>
+                                <div class="note-icon"><i class="fas fa-users"></i></div>
                                 <div class="note-body">
                                     <p>نعمل جاهدين لضمان تقديم
                                         خدمة متميزة</p>
@@ -721,40 +732,26 @@
                 </div>
                 <div class="footer-bottom flex-center" data-aos="fade-down" data-aos-offset="50">
                     <div class="payment ">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/1.jpg" alt="payment">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/2.jpg" alt="payment">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/3.jpg" alt="payment">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/4.jpg" alt="payment">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/5.jpg" alt="payment">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/img/payment/6.jpg" alt="payment">
-                                </div>
-
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <div class="credit">
-                        <p>جميع الحقوق محفوظة، مجموعة مؤسسات صادق محروس التجارية 2020 &copy;</p>
-
-                        <p> صنع فى <a href="https://tasawk.com.sa/" target="_blank"><img
-                                    src="./assets/img/icons/footer.png" alt=".."></a></p>
+                        <img src="./assets/img/payment/1.jpg" alt="payment">
+                        <img src="./assets/img/payment/2.jpg" alt="payment">
+                        <img src="./assets/img/payment/3.jpg" alt="payment">
+                        <img src="./assets/img/payment/4.jpg" alt="payment">
+                        <img src="./assets/img/payment/5.jpg" alt="payment">
+                        <img src="./assets/img/payment/6.jpg" alt="payment">
                     </div>
                 </div>
             </div>
         </div>
+        <div class="credit">
+            <div class="c2">
+
+                <p>جميع الحقوق محفوظة، مجموعة مؤسسات صادق محروس التجارية 2020 &copy;</p>
+
+                <p> صنع فى <a href="https://tasawk.com.sa/" target="_blank"><img src="./assets/img/icons/footer.png"
+                            alt=".."></a></p>
+            </div>
+        </div>
+
     </footer>
 
 

@@ -178,6 +178,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 576px) {
+        margin-bottom: 25px;
+    }
+
     h3 {
         font-size: 24px;
         margin: 0;
@@ -385,7 +389,7 @@ nav {
 
     .nav-bottom {
         border-bottom: 1px solid #e6e6e6;
-        padding: 30px 0;
+        padding: 15px 0;
 
         .c2 {
             display: flex;
@@ -440,7 +444,7 @@ nav {
                     font-size: 18px;
                     position: absolute;
                     top: 50%;
-                    left: 20px;
+                    left: 30px;
                     transform: translate(-50%, -50%);
                     color: $color1;
                     cursor: pointer;
@@ -480,6 +484,7 @@ nav {
                 margin-right: 20px;
                 color: $color1;
                 cursor: pointer;
+                font-family: TajawalMedium;
 
                 i {
                     font-size: 18px;
@@ -489,6 +494,7 @@ nav {
 
                 span {
                     i {
+                        font-size: 15px;
                         margin: 0;
                     }
                 }
@@ -515,11 +521,11 @@ nav {
 
             .cart {
                 @media (max-width: 992px) {
-                    font-size: 24px;
+                    font-size: 20px;
                     margin-right: 20px;
 
                     i {
-                        font-size: 24px;
+                        font-size: 20px;
                         margin: 0;
                     }
                 }
@@ -541,7 +547,7 @@ nav {
 
             div {
                 margin-right: 20px;
-                font-size: 24px;
+                font-size: 20px;
                 color: $color1;
                 cursor: pointer;
             }
@@ -642,11 +648,6 @@ nav {
                 padding: 0 30px;
                 padding-top: 30px;
 
-                .nava-head {
-                    display: flex;
-                    margin: 9px 0;
-                }
-
                 & > ul {
                     display: flex;
                     flex-direction: column;
@@ -661,16 +662,39 @@ nav {
                     }
                 }
                 .nava-head {
+                    display: flex;
+                    margin: 9px 0;
                     font-size: 17px;
                     a {
                         color: #bdbdbd;
                     }
                     .nava-lang {
+                        width: fit-content;
+                        transition: all 0.5s;
                         .drop {
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
-                            width: fit-content;
+                            i {
+                                margin-right: 5px;
+                                margin-top: -2px;
+                            }
+                        }
+                        ul {
+                            display: none;
+                            li {
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    .nava-currency {
+                        width: fit-content;
+                        transition: all 0.5s;
+                        margin-right:30px;
+                        .drop {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
                             i {
                                 margin-right: 5px;
                                 margin-top: -2px;
@@ -733,7 +757,7 @@ nav {
 .search-form {
     height: 0%;
     width: 0%;
-    background-color: #fffffff2;
+    background-color: white;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -754,11 +778,11 @@ nav {
     }
 
     .close-search {
-        font-size: 27px;
+        font-size: 20px;
         margin-bottom: 125px;
         margin-top: 70px;
         cursor: pointer;
-        color: $color1;
+        color: #b1b1b1;
 
         @media (max-width: 576px) {
             margin-bottom: 130px;
@@ -770,7 +794,7 @@ nav {
         width: 33.572%;
         text-align: center;
         margin: 0 auto;
-        height: 55px;
+        height: 45px;
         position: relative;
 
         @media (max-width: 768px) {
@@ -783,16 +807,18 @@ nav {
             height: 100%;
         }
         input {
-            background-color: transparent;
+            background-color: #f7f7f7;
             border: none;
-            font-family: TanseekLight;
             width: 100%;
             height: 100%;
-            color: white;
             font-size: 15px;
             border-radius: 50px;
             border: 2px solid rgb(230, 230, 230);
             padding: 0 30px;
+            font-family: "Tajawal";
+            color: rgb(110, 110, 110);
+            line-height: 4;
+
 
             @media (max-width: 576px) {
                 padding: 0 15px;
@@ -984,29 +1010,47 @@ header {
         }
     }
 
-    .banners-content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    .banners-swiper-container {
+        width: 100%;
+        overflow: hidden;
 
+        .swiper-pagination {
+            position: static;
+            margin-top: 30px;
+            display: none;
+
+            @media (max-width: 1200px) {
+                display: block;
+            }
+        }
+
+        //swiper bagenation
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 5px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+            margin-bottom: 10px;
+
+            @media (max-width: 576px) {
+                width: 12px;
+                height: 3px;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background-color: $color1;
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 2.5px;
+        }
+    }
+
+    .banners-content {
         .banner {
             text-align: center;
-            width: 25%;
-            max-width: 330px;
-
-            @media (max-width: 1400px) {
-                width: 24%;
-                max-width: unset;
-            }
-            @media (max-width: 992px) {
-                width: 50%;
-                max-width: unset;
-                margin-bottom: 35px;
-            }
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-
             .banner-img {
                 max-width: 330px;
                 margin-bottom: 25px;
@@ -1288,7 +1332,7 @@ header {
 }
 
 #notes {
-    padding: 60px 0;
+    padding: 50px 0;
     background-color: $color1;
     color: white;
 
@@ -1379,12 +1423,13 @@ header {
                 font-size: 16px;
                 margin: 0 auto;
                 max-width: 70%;
+                line-height: 1.5;
             }
         }
 
-        &:hover{
-            .note-icon{
-                color:$color2;
+        &:hover {
+            .note-icon {
+                color: $color2;
             }
         }
     }
@@ -1484,7 +1529,7 @@ footer {
                     color: $color1;
                     position: absolute;
                     top: 50%;
-                    left: 20px;
+                    left: 33px;
                     transform: translate(-50%, -50%);
                     font-size: 18px;
                     transition: all 0.5s;
@@ -1559,80 +1604,31 @@ footer {
         margin-top: 60px;
         flex-direction: column;
 
-        .swiper-container {
-            width: 100%;
-            margin: auto;
-            height: auto;
-
-            .swiper-pagination {
-                position: static;
-                margin-top: 50px;
-                display: none;
-
-                @media (max-width: 1200px) {
-                    display: block;
-                }
-            }
-            .swiper-pagination-bullet {
-                width: 15px;
-                height: 5px;
-                border-radius: 10px;
-                background: rgba(0, 0, 0, 0.5);
-                opacity: 1;
-                margin-bottom: 10px;
-
-                @media (max-width: 576px) {
-                    width: 12px;
-                    height: 3px;
-                }
-            }
-            .swiper-pagination-bullet-active {
-                opacity: 1;
-                background-color: $color1;
-            }
-            .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-                margin: 0 2.5px;
-            }
-
-            //swiper buttons
-
-            .swiper-slide {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-
-                a {
-                    img {
-                        max-width: 100%;
-                        transition: all 0.5s;
-                    }
-                }
-            }
-        }
-
         .payment {
-            width: 50%;
-            margin-bottom: 60px;
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
 
-            @media (max-width: 1200px) {
-                width: 60%;
-            }
-            @media (max-width: 768px) {
-                width: 80%;
+            img {
+                margin-bottom: 40px;
             }
         }
-
-        .credit {
+    }
+    .credit {
+        background-color: #f7f7f7;
+        width: 100%;
+        .c2 {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
-            margin-bottom: 15px;
-
+            padding: 14px 0;
             p {
                 margin: 0;
             }
+
             @media (max-width: 992px) {
                 flex-direction: column;
                 justify-content: center;
@@ -1720,7 +1716,7 @@ html[dir="ltr"] {
                 .search-content {
                     .search-btn {
                         left: unset;
-                        right: 10px;
+                        right: 20px;
                     }
                 }
             }
@@ -1746,7 +1742,6 @@ html[dir="ltr"] {
                     @media (max-width: 992px) {
                         margin-right: unset;
                         margin-left: 20px;
-                        font-size: 24px;
 
                         i {
                             margin: 0;
@@ -1778,6 +1773,16 @@ html[dir="ltr"] {
                             right: 35px;
                         }
                         .nava-lang {
+                            .drop {
+                                i {
+                                    margin-right: unset;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                        .nava-currency {
+                            margin-right:unset;
+                            margin-left:30px;
                             .drop {
                                 i {
                                     margin-right: unset;
@@ -1830,7 +1835,7 @@ html[dir="ltr"] {
                 .form-group {
                     a {
                         left: unset;
-                        right: 10px;
+                        right: 23px;
                     }
                     input {
                         padding-right: unset;
