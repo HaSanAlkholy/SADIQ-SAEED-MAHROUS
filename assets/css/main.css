@@ -2209,6 +2209,12 @@ footer .credit .c2 p {
   margin: 0;
 }
 
+@media (max-width: 1400px) {
+  footer .credit .c2 {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 992px) {
   footer .credit .c2 {
     -webkit-box-orient: vertical;
