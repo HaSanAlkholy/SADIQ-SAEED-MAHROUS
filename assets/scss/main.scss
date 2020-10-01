@@ -324,6 +324,10 @@ nav {
         }
     }
 
+    .fa-sort-down:before {
+        font-size: 11px;
+    }
+
     .nav-top {
         background-color: transparent;
         position: absolute;
@@ -488,13 +492,13 @@ nav {
 
                 i {
                     font-size: 18px;
-                    margin-left: 9px;
+                    margin-left: 5px;
                     transition: all 0.5s;
                 }
 
                 span {
                     i {
-                        font-size: 15px;
+                        font-size: 11px;
                         margin: 0;
                     }
                 }
@@ -669,9 +673,10 @@ nav {
                         color: #bdbdbd;
                     }
                     .nava-lang {
-                        width: fit-content;
                         transition: all 0.5s;
+                        width: 40%;
                         .drop {
+                            width: fit-content;
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
@@ -681,6 +686,7 @@ nav {
                             }
                         }
                         ul {
+                            width: fit-content;
                             display: none;
                             li {
                                 margin: 10px 0;
@@ -688,10 +694,10 @@ nav {
                         }
                     }
                     .nava-currency {
-                        width: fit-content;
                         transition: all 0.5s;
-                        margin-right:30px;
+                        width: 40%;
                         .drop {
+                            width: fit-content;
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
@@ -701,6 +707,7 @@ nav {
                             }
                         }
                         ul {
+                            width: fit-content;
                             display: none;
                             li {
                                 margin: 10px 0;
@@ -791,18 +798,11 @@ nav {
     }
 
     .search {
-        width: 33.572%;
+        width: 280px;
         text-align: center;
         margin: 0 auto;
         height: 45px;
         position: relative;
-
-        @media (max-width: 768px) {
-            width: 75%;
-        }
-        @media (max-width: 576px) {
-            width: 85%;
-        }
         form {
             height: 100%;
         }
@@ -813,12 +813,11 @@ nav {
             height: 100%;
             font-size: 15px;
             border-radius: 50px;
-            border: 2px solid rgb(230, 230, 230);
+            border: none;
             padding: 0 30px;
             font-family: "Tajawal";
             color: rgb(110, 110, 110);
             line-height: 4;
-
 
             @media (max-width: 576px) {
                 padding: 0 15px;
@@ -838,7 +837,7 @@ nav {
         .searching {
             position: absolute;
             top: 50%;
-            left: 40px;
+            left: 30px;
             transform: translate(-50%, -50%);
             cursor: pointer;
             border: none;
@@ -1606,17 +1605,19 @@ footer {
 
         .payment {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
 
             img {
-                margin-bottom: 40px;
+                margin-bottom: 20px;
+                width: 80px;
             }
         }
     }
+
     .credit {
         background-color: #f7f7f7;
         width: 100%;
@@ -1629,8 +1630,8 @@ footer {
                 margin: 0;
             }
 
-            @media(max-width:1400px){
-                padding:15px;
+            @media (max-width: 1400px) {
+                padding: 15px;
             }
 
             @media (max-width: 992px) {
@@ -1731,7 +1732,7 @@ html[dir="ltr"] {
                     margin-left: 20px;
 
                     i {
-                        margin-right: 9px;
+                        margin-right: 5px;
                         margin-left: unset;
                     }
 
@@ -1785,8 +1786,6 @@ html[dir="ltr"] {
                             }
                         }
                         .nava-currency {
-                            margin-right:unset;
-                            margin-left:30px;
                             .drop {
                                 i {
                                     margin-right: unset;

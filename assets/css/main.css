@@ -650,6 +650,10 @@ nav .row > div {
   padding: 0;
 }
 
+nav .fa-sort-down:before {
+  font-size: 11px;
+}
+
 nav .nav-top {
   background-color: transparent;
   position: absolute;
@@ -861,13 +865,13 @@ nav .nav-bottom .nav-icons > div {
 
 nav .nav-bottom .nav-icons > div i {
   font-size: 18px;
-  margin-left: 9px;
+  margin-left: 5px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 nav .nav-bottom .nav-icons > div span i {
-  font-size: 15px;
+  font-size: 11px;
   margin: 0;
 }
 
@@ -1074,13 +1078,14 @@ nav .nava .nava-content .nava-head {
     color: #bdbdbd;
   }
   nav .nava .nava-content .nava-head .nava-lang {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 40%;
+  }
+  nav .nava .nava-content .nava-head .nava-lang .drop {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  nav .nava .nava-content .nava-head .nava-lang .drop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1096,20 +1101,23 @@ nav .nava .nava-content .nava-head {
     margin-top: -2px;
   }
   nav .nava .nava-content .nava-head .nava-lang ul {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     display: none;
   }
   nav .nava .nava-content .nava-head .nava-lang ul li {
     margin: 10px 0;
   }
   nav .nava .nava-content .nava-head .nava-currency {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 40%;
+  }
+  nav .nava .nava-content .nava-head .nava-currency .drop {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    margin-right: 30px;
-  }
-  nav .nava .nava-content .nava-head .nava-currency .drop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1125,6 +1133,9 @@ nav .nava .nava-content .nava-head {
     margin-top: -2px;
   }
   nav .nava .nava-content .nava-head .nava-currency ul {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     display: none;
   }
   nav .nava .nava-content .nava-head .nava-currency ul li {
@@ -1225,23 +1236,11 @@ nav .nava-active .nava-content {
 }
 
 .search-form .search {
-  width: 33.572%;
+  width: 280px;
   text-align: center;
   margin: 0 auto;
   height: 45px;
   position: relative;
-}
-
-@media (max-width: 768px) {
-  .search-form .search {
-    width: 75%;
-  }
-}
-
-@media (max-width: 576px) {
-  .search-form .search {
-    width: 85%;
-  }
 }
 
 .search-form .search form {
@@ -1255,7 +1254,7 @@ nav .nava-active .nava-content {
   height: 100%;
   font-size: 15px;
   border-radius: 50px;
-  border: 2px solid #e6e6e6;
+  border: none;
   padding: 0 30px;
   font-family: "Tajawal";
   color: #6e6e6e;
@@ -1275,7 +1274,7 @@ nav .nava-active .nava-content {
 .search-form .search .searching {
   position: absolute;
   top: 50%;
-  left: 40px;
+  left: 30px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
@@ -2169,7 +2168,7 @@ footer .footer-bottom {
 
 footer .footer-bottom .payment {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2184,7 +2183,8 @@ footer .footer-bottom .payment {
 }
 
 footer .footer-bottom .payment img {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  width: 80px;
 }
 
 footer .credit {
@@ -2307,7 +2307,7 @@ html[dir="ltr"] nav .nav-bottom .nav-icons > div {
 }
 
 html[dir="ltr"] nav .nav-bottom .nav-icons > div i {
-  margin-right: 9px;
+  margin-right: 5px;
   margin-left: unset;
 }
 
@@ -2349,10 +2349,6 @@ html[dir="ltr"] nav .nav-bottom .nav-icons-sm > div {
   html[dir="ltr"] nav .nava .nava-content .nava-head .nava-lang .drop i {
     margin-right: unset;
     margin-left: 5px;
-  }
-  html[dir="ltr"] nav .nava .nava-content .nava-head .nava-currency {
-    margin-right: unset;
-    margin-left: 30px;
   }
   html[dir="ltr"] nav .nava .nava-content .nava-head .nava-currency .drop i {
     margin-right: unset;

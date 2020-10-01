@@ -250,67 +250,12 @@ $(window).on('load', function () {
 
   });
 
-  var mySwiper6 = new Swiper('footer .swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    updateOnWindowResize: true,
-    slidesPerView: 6,
-    spaceBetween: 10,
-    autoplay: false,
-    allowTouchMove: false,
-
-    breakpoints: {
-      1200: {
-        slidesPerView: 6,
-      },
-      992: {
-        slidesPerView: 5,
-        allowTouchMove: true,
-        autoplay: {
-          delay: 4000,
-        }
-      },
-      768: {
-        slidesPerView: 4,
-        allowTouchMove: true,
-        autoplay: {
-          delay: 4000,
-        }
-      },
-      576: {
-        slidesPerView: 3,
-        allowTouchMove: true,
-        autoplay: {
-          delay: 4000,
-        }
-      },
-      // when window width is >= 250px
-      0: {
-        slidesPerView: 2,
-        allowTouchMove: true,
-        autoplay: {
-          delay: 4000,
-        }
-      }
-    },
-
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-
-
 
   if (window.innerWidth <= 1200) {
     setInterval(() => {
       mySwiper3.slideNext();
       mySwiper4.slideNext();
       mySwiper5.slideNext();
-      mySwiper6.slideNext();
     }, 4000);
   }
 
